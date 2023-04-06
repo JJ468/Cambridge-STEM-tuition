@@ -1,90 +1,58 @@
-** {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Reset default styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
+/* Set background image for hero section */
+.hero {
+	background-image: url('bridge.jpg');
+	background-size: cover;
+	background-position: center;
+	height: 500px;
+	position: relative;
 }
 
+/* Add overlay for hero section */
+.hero::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Style header */
 header {
-    position: relative;
-    background-color: #333;
-    padding: 2rem 0;
-    text-align: center;
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
 }
 
-.overlay {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Style title */
+h1 {
+	font-size: 36px;
+	text-align: center;
 }
 
-header img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 1rem;
+/* Style content section */
+.content {
+	display: flex;
+	align-items: center;
+	padding: 50px;
 }
 
-header h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    color: #fff;
+/* Style left image */
+.content img {
+	width: 50%;
+	margin-right: 50px;
 }
 
-header h2 {
-    color: #ccc;
-    margin-bottom: 2rem;
-}
-
-nav a {
-    color: #fff;
-    margin: 0 1rem;
-    text-decoration: none;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-main {
-    max-width: 66.66%;
-    margin: 0 auto;
-}
-
-section {
-    padding: 2rem;
-    text-align: center;
-}
-
-section h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-section p, ul {
-    font-size: 1.1rem;
-    line-height: 1.8;
-}
-
-section ul {
-    list-style: none;
-}
-
-section li {
-    margin-bottom: 0.5rem;
-}
-
-a {
-    color: #3498db;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+/* Style text description */
+.content p {
+	font-size: 18px;
+	line-height: 1.5;
 }
